@@ -55,8 +55,6 @@ const formatEvent = (event) => {
 
   switch (event.type) {
     case GITHUB_ACTION_TYPE.PUSH_EVENT:
-      console.log(event.count)
-
       if (event.commits > 0) {
         return `Pushed ${event.commits} commit${event.commits !== 1 ? "s" : ""} to ${repo}`;
       }
